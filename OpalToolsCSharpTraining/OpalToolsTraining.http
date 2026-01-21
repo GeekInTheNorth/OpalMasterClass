@@ -1,0 +1,17 @@
+@OpalToolsTraining_HostAddress = http://localhost:5248
+
+### Discovery Request
+
+GET {{OpalToolsTraining_HostAddress}}/discovery
+Accept: application/json
+
+### Greeting Request
+
+POST {{OpalToolsTraining_HostAddress}}/tools/user-greeter
+Content-Type: application/json
+
+{
+  "parameters": {
+    "Name": "John Doe"
+  }
+}
