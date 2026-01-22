@@ -1,0 +1,10 @@
+Initial `.venv` example:
+
+pyvenv.cfg
+```
+home = C:\Program Files\Python314
+include-system-site-packages = false
+version = 3.14.2
+executable = C:\Program Files\Python314\python.exe
+command = C:\Program Files\Python314\python.exe -m venv d:\Opti Academy\OpalToolsTraining\OpalToolsPythonTraining\.venv
+```
