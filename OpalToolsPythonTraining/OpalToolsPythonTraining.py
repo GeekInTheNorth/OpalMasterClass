@@ -1,9 +1,6 @@
-from opal_tools_sdk import ToolsService, tool
-from opal_tools_sdk import requires_auth
-from pydantic import BaseModel
+from opal_tools_sdk import ToolsService
 from fastapi import FastAPI
 import uvicorn
-import random
 
 app = FastAPI(
     title="Opal Tools API",
@@ -13,20 +10,8 @@ app = FastAPI(
 
 tools_service = ToolsService(app)
 
-class GreetingParameters(BaseModel):
-    name: str
-
-@tool("user-greeter", "Greets a user based on the provided name")
-async def greeter(parameters: GreetingParameters):
-    greetings = [
-        "Hello",
-        "Hi",
-        "Hey there",
-        "Greetings",
-        "Welcome"
-    ]
-    chosen_greeting = random.choice(greetings)
-    return f"{chosen_greeting}, {parameters.name}!"
+# Import tools AFTER initializing ToolsService
+from tools import greeter_tool
 
 # Routes
 @app.get("/")
