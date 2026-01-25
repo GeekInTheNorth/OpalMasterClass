@@ -12,6 +12,8 @@ tools_service = ToolsService(app)
 
 # Import tools AFTER initializing ToolsService
 from tools import greeter_tool
+from tools import math_tool
+from tools import authenticated_tool
 
 # Routes
 @app.get("/")

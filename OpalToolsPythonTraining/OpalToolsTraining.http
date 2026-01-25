@@ -20,3 +20,45 @@ Content-Type: application/json
   }
 }
 
+### Multiplication Request
+
+POST {{OpalToolsTraining_HostAddress}}/tools/advanced-multiplier
+Content-Type: application/json
+
+{
+  "parameters": {
+    "valueOne": 1.813,
+    "valueTwo": 93,
+    "numberOfPlaces": 2
+  }
+}
+
+### Authenticated Tools Request (using random GUIDs)
+
+POST {{OpalToolsTraining_HostAddress}}/tools/authentication-test
+Content-Type: application/json
+
+{
+  "parameters": {
+    "EmailAddress": "jo.bloggs@example.com"
+  },
+  "auth": {
+    "provider": "OptiID",
+    "credentials": {
+      "token_type": "Bearer",
+      "access_token": "<access-token-1446-chars>",
+      "org_sso_id": "<id>",
+      "cfg_client_id": "",
+      "user_id": "00000000000000000000abcdef000001",
+      "instance_id": "00000000000000000000abcdef000002",
+      "customer_id": "00000000000000000000abcdef000003",
+      "product_sku": "OPAL"
+    }
+  },
+  "environment": {
+    "execution_mode": "interactive"
+  },
+  "chat_metadata": {
+    "thread_id": "00000000-0000-0000-0000-abcdef000005"
+  }
+}
