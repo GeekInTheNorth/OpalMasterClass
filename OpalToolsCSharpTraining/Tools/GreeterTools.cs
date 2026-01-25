@@ -1,13 +1,12 @@
 using System.ComponentModel;
 using Optimizely.Opal.Tools;
 
-namespace OpalToolsTraining;
+namespace OpalToolsCSharpTraining.Tools;
 
 public class GreeterTools
 {
     [OpalTool("user_greeter")]
     [Description("A description to give Opal context of how and when to use this tool.")]
-    [OpalAuthorization("provider", "scope", false)]
     public async Task<object> UserGreeter(GreetingParameters parameters)
     {
         var greetingTemplates = new[]
