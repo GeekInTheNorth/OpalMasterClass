@@ -19,4 +19,6 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 app.MapOpalTools();
 
+app.Map("/", () => "Welcome to the Opal Tools Master Class.");
+
 app.Run();
