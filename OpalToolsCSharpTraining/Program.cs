@@ -10,6 +10,7 @@ builder.Services.AddOpalToolService();
 builder.Services.AddOpalTool<GreeterTools>();
 builder.Services.AddOpalTool<MathTools>();
 builder.Services.AddOpalTool<AuthenticatedTools>();
+builder.Services.AddOpalTool<MasterClassOne>();
 
 // Register depenedencies
 builder.Services.AddSingleton<IMathToolService, MathToolService>();
