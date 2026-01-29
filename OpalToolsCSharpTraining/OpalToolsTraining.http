@@ -29,15 +29,6 @@ Content-Type: application/json
   }
 }
 
-### Banana Tool
-
-POST {{OpalToolsTraining_HostAddress}}/tools/banana-picture
-Content-Type: application/json
-
-{
-  "parameters": {}
-}
-
 ### Authenticated Tools Request (using random GUIDs)
 
 POST {{OpalToolsTraining_HostAddress}}/tools/authentication-test
