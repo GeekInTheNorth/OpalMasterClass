@@ -23,10 +23,19 @@ Content-Type: application/json
 
 {
   "parameters": {
-    "ValueOne": 1.755,
+    "ValueOne": 1.995,
     "ValueTwo": 93,
     "NumberOfPlaces": 3
   }
+}
+
+### Banana Tool
+
+POST {{OpalToolsTraining_HostAddress}}/tools/banana-picture
+Content-Type: application/json
+
+{
+  "parameters": {}
 }
 
 ### Authenticated Tools Request (using random GUIDs)
